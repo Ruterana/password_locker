@@ -4,7 +4,9 @@ class Credential:
     """
 
     Credential_list = [] # Empty User list
-
+    
+    @classmethod
+    def check_User(cls,user_name,password):
     def __init__(self,Account,user_name,password):
 
       # docstring removed for simplicity
@@ -27,4 +29,37 @@ class Credential:
         '''
 
         Credential.Credential_list.remove(self)
-        
+    @classmethod
+    def find_by_Account(cls,Account):
+        '''
+        Method that takes in a credential  and returns a account that matches that account .
+
+        Args:
+            Account: Account to search for
+        Returns :
+            Credential of Account that matches the Account.
+        '''
+
+        for Credential in cls.Credential_list:
+            if Credential.Account == Account:
+                return Credential
+    @classmethod
+    def Credential_exist(cls,Account):
+        '''
+        Method that checks if a Account exists from the Credential list.
+        Args:
+            Account: ACCOUNT to search if it exists
+        Returns :
+            Boolean: True or false depending if the Account exists
+        '''
+        for Credential in cls.Credential_list:
+            if Credential.Account == Account:
+                    return True
+
+        return False
+    @classmethod
+    def display_Credential(cls):
+        '''
+        method that returns the Credential list
+        '''
+        return cls.Credential_list
