@@ -35,5 +35,22 @@ class TestUser(unittest.TestCase):
             '''
             User.User_list = []
 
-if __name__ == '__main__':
+    def test_check_user_(self):
+        '''
+        Function to test whether the login in function check_user works as expected
+        '''
+        self.new_User = Account('charlene','charlen')
+        self.new_User.save_user()
+        User2 = Account('Tuyishime', 'CHAR@!#')
+        User2.save_user()
+        User3 = Account('Tubane', 'cha')
+        User3.save()
+
+        for User in Account.users_list:
+            if User.user_name == User2.user_name and User.password == User2.password:
+                current_user = user.user_name
+        return current_user
+        self.assertEqual(Existing_User, Credentials.check_User(user2.password, user2.user_name))
+
+if __name__ == '__main__' :
     unittest.main()
