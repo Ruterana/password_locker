@@ -7,3 +7,9 @@ this application is designed to help users to create  and store  passwords for v
 * To create a password locker Accouunt with my details - login and password
 * Store my esisting login credentials. for example iwamt to store my facebook  account credentials.
 * Generate a password for a new credential/account. For example, let's assume that I have not yet signed up for an Twitter account, I can generate a password that I will use when I sign up for a twitter account.
+
+## Technologies Used
+Python 3.6
+Git version Control
+## License
+MIT (C)
