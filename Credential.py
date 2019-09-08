@@ -10,7 +10,7 @@ class Credential:
     '''
     method that checks if the name and password entered math entries in the users_list
     '''
-    Existing_user=''
+    Existing_user= ''
     for user in Credential.Credential_list:
         if (User .user_name == user_name and password == password):
             Existing_user = user . user_name
