@@ -41,90 +41,38 @@ def check_existing_Credential(Account):
     '''
     return Credential.Credential_exist(Account)
 def main():
-    print(" Welcome to password_locker system . '\n' create  use-name")
-    user_name = input()
+    print(" Welcome to password_locker system . '\n' first select a short code  ")
+    
 
-    print(f" {user_name}.")
-    print('\n')
-    print("Enter password  you want to use")
-    password= input()
-    print(f"{password}.")
-    print(f" this is new user_name and password created '\n'user_name is:{user_name} and password is:{password}")
-    print('\n')
-    print(" Create account for social media' '\n'Enter name of social media Account you want to create")
-    Account = input()
-
-    print(f" {Account}.")
-    print('\n')
-    print("Enter your user_name")
-    user_name= input()
-    print(f"{user_name}.")
-    print('\n')
-    print("Enter your password")
-    password= input()
-    print(f"{password}.")
-    print('\n')
-    print(f"Hello {user_name}. what would you like to do?")
-    print('\n')
     while True:
-                print("Use these short codes : cA - create a new Account, dA - display Account, fA -find a Account, ex -exit the Credential list ")
+                print("Use these short codes :\n cA - create a new Account,\n lg-login,\n ex-exit ")
 
                 short_code = input().lower()
-                if short_code == 'cA':
-                            print("New Credential")
-                            # print("-"Account)
-
-                            print ("Account ....")
-                            Account = input()
-
-                            print("user_name ...")
-                            user_name = input()
-
-                            print("password ....well what would want to do")
-                            password = input()
-                            print(f"well {user_name}. what would you like to do?")
+                if short_code== 'ex':
+                    break
+                elif short_code == 'ca':
+                            
+                            print("-"*30)
                             print('\n')
+                            print("create new Account: ")
+                            user_name = input("Enter user_name -")
+                            passwor= input("Enter password -")
+                            save_Users(create( user_name,password))
+                            print(f" new Account created for: {user_name}. what would you like to do?")
+                            print('\n')
+                elif short_code == 'lg':
+                           print("-"*20)
+                           print('\n')
+                           print('Enter your account details to login:')
+                           print('\n')
+                           username = input('Enter your first name - ')
+                           password = str(input('Enter your password - '))
+                           user_exists = verify_user(user_name,password)
+                if user_exists == user_name:
+                           print('\n')
+                           print(f'Welcome {username}. Please select a short code to continue.')
                             
-                            password = input()
-    #                         save_Credentials(create_Credential(Account,user_name,password)) # create and save Credential.
-    #                         print ('\n')
-    #                         print(f"New Credential  Account created is: {Account} ")
-    #                         print ('\n')
-    #                         save_Credentials(create_Credential(Account,user_name,password)) # create and save new contact.
-    #                         print ('\n')
-    #                         print(f"New Credential {Account}  created")
-    #                         print ('\n')
-    #             elif short_code == 'dA':
-
-    #                     if display_Credentials():
-    #                                 print("Here is a list of all your Credentials")
-    #                                 print('\n')
-    #                     else:
-    #                                 print('\n')
-    #                                 print("You dont seem to have any Credential saved yet")
-    #                                 print('\n')
-
-    #             elif  short_code == 'fc':
-
-    #                                 print("Enter the Account you want to search for")
-
-    #                                 search_Account = input()
-
-    #         if check_existing_Accounts (search_Account):
-    #                                 search_Account = find_by_Account(search_Account)
-    #                                 print(f"{search_Credential.Account}")
-    #                                 print('-' * 20)
-    #                                 print(f"user_name.......{search_Credential.user_name}")
-    #                                 print(f"password.......{search_Credential.password}")
-    #     else:
-    #                                 print("That Account does not exist")
-    #         elif short_code == "ex":
-    #                         print("thank you .......")
-    # break
-    #                            else:
-    #                         print("I really didn't get that. Please use the short codes")
-
-                            
+                           
 
 
 
