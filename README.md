@@ -18,7 +18,7 @@ Python 3.6
 for any suggestion or idear or any issues please contact me on my email:ncharlene38@gmail.com
 phone number:+250783853580.
 
-### License and Copyright information.
+ ### License and Copyright information.
  MIT license
  copyright(c)2019 charlene niyitanga
- permission is for free to any person who want copy of this application.
+ permission is for free to any person who want copy of this application. 
