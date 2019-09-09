@@ -39,11 +39,11 @@ class TestUser(unittest.TestCase):
         '''
         Function to test whether the login in function check_user works as expected
         '''
-        self.new_User = Account('charlene','charlen')
+        self.new_User = Account('','')
         self.new_User.save_user()
-        User2 = Account('Tuyishime', 'CHAR@!#')
+        User2 = Account('', '')
         User2.save_user()
-        User3 = Account('Tubane', 'cha')
+        User3 = Account('', '')
         User3.save()
 
         for User in Account.users_list:
