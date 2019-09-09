@@ -34,14 +34,14 @@ class User:
 
 
 
-    @classmethod
-    def Existing_User(cls,user_name,password):
-        '''
-        method that checks if the name and password entered match entries in the users_list
-        '''
-    Existing_user= ''
-    for User in User.User_list:
-        if (User .user_name == user_name and password == password):
-            Existing_user = user . user_name
-    return Existing_user
-    self.assertEqual(Existing_user, User.check_User(user2.password, user2.user_name))
+    # @classmethod
+    # def Existing_User(cls,user_name,password):
+    #     '''
+    #     method that checks if the name and password entered match entries in the users_list
+    #     '''
+    # Existing_user= ''
+    # for User in User.User_list:
+    #     if (User .user_name == user_name and password == password):
+    #         Existing_user = user . user_name
+    # return Existing_user
+    # self.assertEqual(Existing_user, User.check_User(user2.password, user2.user_name))
